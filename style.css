@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2')
+
+body
+{
+    font-family: 'Roboto',sans-serif;
+}
+*{
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     text-decoration: none;
+ }
+
+.grid{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+}
+.sidebar
+{
+    grid-column-end: span 1;
+    height: 100%;
+    background: #042331;
+
+}
+.sidebar header{
+    font-size:22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+}
+.sidebar ul a{
+    display: block;
+    height: 100;
+    width: 100;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+}
+.sidebar ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right: 16px;
+}
+
+.content{
+
+    background: url(EB_Logo.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.Login {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    font-size:22px;
+}
+.Login label{
+    left: 0;
+}
+.Login input[type=text], input[type=password] {
+   width: 250px;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+}
+
+.Login button {
+  background-color: #000080;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+}
+
+.Login button:hover {
+  opacity: 0.8;
+}
+.SelectBy {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size:22px;
+
+}
+
+i.fas.fa-chevron-circle-down {
+    padding-left: 160px;
+}
+
+.Sort_By {
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-weight: 300;
+    width: 250px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: white;
+    box-shadow: 0 0 2px rgba(0,0,0,0.12), 02px 2px rgba(0,0,0,0.24);
+}
+
+.dialogger{
+   width: 270px;
+    display: none;
+    min-height: 40px;
+    max-height: 90%;
+    border-top: 1px solid #f4f4f4;
+}
+
+.dialogger.open{
+    display: block;
+}
+
+.dialogger div{
+    padding: 20px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: white;
+    transition: all 0.2s;
+}
+
+.dialogger div:hover{
+    background: #f2f2f2;
+}
+.Dia_SO {
+    display:none;
+    position: absolute;
+    left: calc(36% + 270px);
+    top: 64px;
+}
+.Dia_SO.open{
+    display: block;
+}
+.Dia_SO div {
+    padding: 20px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: white;
+    transition: all 0.2s;
+}
+.Dia_SO div:hover{
+    background: #f2f2f2;
+}
+.Dia_RP {
+    display:none;
+    position: absolute;
+    left: calc(36% + 270px);
+    top: 125px;
+}
+.Dia_RP.open{
+    display: block;
+}
+.Dia_RP div {
+    padding: 20px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: white;
+    transition: all 0.2s;
+}
+.Dia_RP div:hover{
+    background: #f2f2f2;
+}
+
+.Search_store {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size:22px;
+
+}
+
+.Search_store input{
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-weight: 300;
+    width: 400px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #666;
+    box-shadow: 0 0 2px rgba(0,0,0,0.12), 02px 2px rgba(0,0,0,0.24);
+}
+
+.Search_store input:focus {
+    border-bottom-color: tomato;
+}
+
+
+.Search_store .close {
+    position: absolute;
+    font-size: 13px;
+    z-index: 10;
+    top: 30px;
+    left: calc(36% + 370px);
+    color: #aaa;
+    cursor: pointer;
+    display: none;
+
+}
+.Search_store .go {
+  position: absolute;
+  left: calc(36% + 410px);
+  font-size: 14px;
+  background-color: #000080;
+  color: white;
+  padding: 10px 10px;
+  margin: 20px 20px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.Search_store .close.visible {
+    display: block;
+}
+
+
+.dialog{
+    width: 420px;
+    display: none;
+    min-height: 40px;
+    max-height: 90%;
+    overflow: scroll;
+    border-top: 1px solid #f4f4f4;
+}
+
+.dialog.open{
+    display: block;
+}
+
+.dialog div{
+    padding: 20px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    background: white;
+    transition: all 0.2s;
+}
+
+.dialog div:hover{
+    background: #f2f2f2;
+}
+
+.image {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    display : none;
+    padding: 10px;
+
+}
+
+.image.open {
+    display: flex;
+    justify-content: center;
+    background: darkgray;
+}
+
+
+img {
+    max-width: 100%;
+    height: 90%;
+}
+span.Toggle1 {
+  position: absolute;
+  bottom: 10px;
+  right: 15%;
+  align: centre;
+  font-size: 20px;
+  background-color: black;
+  font: icon;
+  color: white;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  border: none;
+  cursor: pointer;
+}
+span.Toggle2 {
+  position: absolute;
+  right: 10%;
+  bottom: 10px;
+  align: centre;
+  font-size: 20px;
+  background-color: black;
+  font: icon;
+  color: white;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  cursor: pointer;
+}
+.Store_data {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    display : none;
+    padding: 10px;
+}
+.Store_data.open {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    font-size: 24px;
+    background: darkgray;
+}
+h1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    font-size: 40px;
+    box-shadow: 0 0 black;
+    background: whitesmoke;
+
+}
+.Store_data1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    padding: 10px;
+    background: white;
+
+}
+.Store_data2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    padding: 10px;
+    background: lightgray;
+
+}
+p {
+  margin-top: 1em ;
+}
+.StoreTable {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+th {
+    padding-left: 35px;
+    padding-right: 35px;
+    border: 2px solid gray;
+}
+td {
+    text-align: center;
+    border: 1px solid gray;
+}
+.tableData {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    font-size: 18px;
+    display: block;
+}
+.tablePivot {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    font-size: 20px;
+    display: block;
+}

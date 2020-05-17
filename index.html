@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EB PAP Library</title>
+    <link rel="stylesheet" href="/CSS/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    </head>
+<body>
+    <div class ="grid">
+     <div class ="sidebar">
+      <header>PAP Library V1.0</header>
+      <ul>
+         <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+         <li><a href="Data.html"><i class="fas fa-chart-bar"></i>Data</a></li>
+         <li><a href="store.html"><i class="fas fa-store"></i>Store</a></li>
+      </ul>
+     </div>
+     <div class="content">
+        <div class="Login">
+            <p>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" id="uname" required>
+            </p>
+            <p>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw" required>
+
+            <button type="submit" onclick="loginmyApp()">Login</button>
+            </p>
+
+        </div>
+     </div>
+    </div>
+    <script src="/eel.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
